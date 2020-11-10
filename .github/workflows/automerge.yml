@@ -19,14 +19,14 @@ jobs:
     steps:
     - name: Checkout latest master branch
       uses: actions/checkout@v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           fetch-depth: 0
           ref: 'develop'
           
     - name: Create Branch
       uses: peterjgrainger/action-create-branch@v2.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         branch: automerge-branch
       
