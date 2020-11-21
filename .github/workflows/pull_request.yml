@@ -31,7 +31,7 @@ jobs:
       run: echo "::set-output name=action_fruit::strawberry"
     
     - name: Print output
-      run: echo $action_fruit
+      run: echo ${{ steps.output.outputs.action_fruit }}
       
     # Runs a single command using the runners shell
     - name: Run a one-line script
