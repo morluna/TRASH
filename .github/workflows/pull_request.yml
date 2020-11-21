@@ -27,7 +27,7 @@ jobs:
       run: echo $action_state
     
     - name: Print env v2
-      run: ${{ env.action_state }}
+      run: echo ${{ env.action_state }}
     
     - name: Output value
       id: output
