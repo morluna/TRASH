@@ -26,6 +26,9 @@ jobs:
     - name: Print value
       run: echo $action_state
     
+    - name: Print env v2
+      run: ${{ env.action_state }}
+    
     - name: Output value
       id: output
       run: echo "::set-output name=action_fruit::strawberry"
