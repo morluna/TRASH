@@ -19,7 +19,20 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+    
+    - name: Get value
+      run: echo "action_state=yellow" >> $GITHUB_ENV
+      
+    - name: Print value
+      run: echo $action_state
+    
+    - name: Output value
+      id: output
+      run: echo "::set-output name=action_fruit::strawberry"
+    
+    - name: Print output
+      run: echo $action_fruit
+      
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: echo Hello, world!
